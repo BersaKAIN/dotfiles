@@ -1,0 +1,61 @@
+
+"=====================================
+" Appearance settings
+"=====================================
+
+:set toolbars=nomenu,nonavigation,noaddons,nobookmarks
+
+"use visualbell instead of beep
+set visualbell
+
+"keep focusing
+set focuscontent
+
+"highlight search result
+set hlsearch
+
+"hint characters
+"set hintchars=lfjdkaesgh
+set hintchars=fjdkaesgh
+
+"fonts for follow hint
+"highlight! Hint font-size: 11pt; background: white; color: red; border: 1px solid red; font-family: "Bitstream Vera Sans Mono",monaco,monospace; 
+highlight! Hint font-size: 11pt; background: white; color: red; border: 1px solid red; font-family:monaco; 
+
+
+"=====================================
+" Keymap settings
+"=====================================
+
+"copy by <C-c>
+map <C-c> :echo Yank!<CR>Y
+
+"j/k scrolling by 5 lines each
+map j 5<C-e>
+map k 5<C-y>
+
+"moving tabs by h/l
+map h <C-S-TAB>
+map l <C-TAB>
+
+"back and forward by H/L
+noremap H <A-Left>
+noremap L <A-Right>
+
+"=====================================
+" other settings
+"=====================================
+
+"exmode IME
+:let g:ex_ime_mode = "inactive"
+
+"web text area IME
+:let g:textarea_ime_mode = "inactive"
+
+"inactive = IME-off, active = IME-on
+
+"auto complete
+set complete=sl
+
+"buffer! config
+map . :buffer!
