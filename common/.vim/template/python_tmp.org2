@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+#encoding: utf-8
+
+__author__ = 'Keisuke SAKAGUCHI'
+__version__ = ""
+__copyright__ = ""
+__license__ = "GPL v3"
+__descripstion__ = ""
+
+import sys
+import os
+import datetime
+import re
+import cPickle as pickle
+
+#constant number (if any)
+
+
+#for logging
+argvs = sys.argv
+argc = len(argvs)
+
+#if (argc != #):
+#    print 'Usage: # python %s arg1 arg2...' % argvs[0]
+#    sys.exit()
+
+d = datetime.datetime.today()
+exp_time = d.strftime("%Y%m%d_%H%M")
+
+
+
+if __name__ == '__main__':
+    # for logging
+    start_time = datetime.datetime.now()
+    print "start at: " + str(start_time)
+    #log_file = open(exp_time + '_' + str(argvs[0]) + '.log', 'w')
+    #log_file.write('script_name: ' + str(argvs) + '\n')
+    #log_file.write('start at: ' + str(start_time) + '\n')
+    
+    # for module test
+    
+    
+    
+    # for logging
+    end_time = datetime.datetime.now()
+    print "end at: " + str(end_time)
+    print "total elapsed time: " + str((end_time - start_time))
+    #log_file.write('end at: ' + str(end_time) + '\n')
+    #log_file.write('total elapsed time: ' + str((end_time - start_time)) + '\n')
