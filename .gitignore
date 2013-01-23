@@ -1,6 +1,6 @@
 .DS_Store
 common/.vim/.bundle/
-common/.vimperator/
 common/.vim/neobundle.vim.git
+common/.vimperator/
 .*~
 *~
