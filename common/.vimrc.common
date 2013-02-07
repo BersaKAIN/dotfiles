@@ -42,6 +42,7 @@ set listchars=tab:>-,eol:$
 set clipboard+=unnamed,autoselect
 set number
 set backspace=indent,eol,start
+set nobackup
 
 
 "Highlight elimination by Esc*2 
@@ -62,6 +63,8 @@ colorscheme solarized
 " change spelling checker colorscheme
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=yellow
+syntax spell toplevel 
+set spell
 
 
 "status line
