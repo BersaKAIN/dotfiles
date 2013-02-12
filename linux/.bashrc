@@ -49,6 +49,6 @@ export PATH=$JAVA:$PATH
 
 # Python
 export PYTHONSTARTUP=/home/keisuke-sa/.pythonstartup
-export PYTHONPATH=$PYTHONPATH:$HOME/work/project/EDCW2012/:$HOME/tools/
+export PYTHONPATH=$PYTHONPATH:$HOME/tools/
 
 
