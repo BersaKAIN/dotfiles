@@ -1,7 +1,8 @@
-export PATH=/home/keisuke-sa/local/lib/:$PATH
+export WORKDIR=/work/$USER
+export PATH=$HOME/local/lib/:$PATH
 
 # UNIX Alias
-alias ll='ls -alh --color=always'
+alias ll='ls -aGhl --color=auto'
 alias cp='cp -p'
 alias diskspace="du -S | sort -n -r |more"
 alias ..='cd ..'
@@ -10,17 +11,25 @@ alias ....='cd ../../..'
 alias df='df -h'
 alias du='du -h'
 
+# DPSTG
+export DPTSG=$WORKDIR/nli2013/dptsg
+export PERL5LIB+=:$DPTSG
+
+# CKY
+#export llncky=$HOME/tools/cky/llncky
+export llncky=$HOME/tools/cky_post/cky/src/llncky
+export PATH=$HOME/tools/cky_post/cky/src:$PATH
+
 # IRSTLM
-export IRSTLM=/home/keisuke-sa/tools/irstlm
+export IRSTLM=$HOME/tools/irstlm
 export PATH=$IRSTLM/bin:$IRSTLM/include:$IRSTLM/lib/:$PATH
 export LD_LIBRARY_PATH=$HOME/tools/irstlm/lib
 
 # SRILM
-export SRILM=/home/keisuke-sa/tools/srilm
+export SRILM=$HOME/tools/srilm
 export PATH=$SRILM/bin:$SRILM/bin/i686-m64:$PATH
 export MANPATH=$MANPATH:$SRILM/man
 export MACHINE_TYPE=i686-m64
-
 
 # git
 source ~/git-completion.bash
@@ -48,7 +57,10 @@ export JAVA=$JAVA_HOME/bin
 export PATH=$JAVA:$PATH
 
 # Python
-export PYTHONSTARTUP=/home/keisuke-sa/.pythonstartup
-export PYTHONPATH=$PYTHONPATH:$HOME/work/project/EDCW2012/:$HOME/tools/
+export PYTHONSTARTUP=$HOME/.pythonstartup
+export PYTHONPATH=$PYTHONPATH:$WORKDIR/proj/:$HOME/tools/
 
+# Pythonz
+[[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
+export PATH=$HOME/.pythonz/pythons/CPython-2.7.3/bin:$PATH
 
