@@ -42,6 +42,7 @@ set listchars=tab:>-,eol:$
 set clipboard+=unnamed,autoselect
 set number
 set backspace=indent,eol,start
+set nobackup
 
 
 "Highlight elimination by Esc*2 
@@ -63,9 +64,14 @@ colorscheme solarized
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=yellow
 
+" strict spelling checker 
+syntax spell toplevel 
+set spell
+
 
 "status line
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set statusline=%F%m%r%h%w\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2 
 
 hi NonText guibg=NONE guifg=DarkGreen
@@ -258,11 +264,11 @@ function! s:unite_my_settings()"{{{
   " Start insert.
   let g:unite_enable_start_insert = 1
 
-  " ウィンドウを分割して開く
+  " Split window (horizontally)
   nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('split')
   inoremap <silent> <buffer> <expr> <C-l> unite#do_action('split')
 
-  " ウィンドウを縦に分割して開く
+  " Split window (vertically) 
   nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
   inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
 endfunction"}}}

@@ -1,0 +1,5 @@
+map l nextTab
+map h previousTab
+map r reload
+map d removeTab
+map u restoreTab

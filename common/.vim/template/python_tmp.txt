@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 #encoding: utf-8
 
-__author__ = 'Keisuke SAKAGUCHI'
+__author__ = ""
 __version__ = ""
 __copyright__ = ""
-__license__ = "GPL v3"
+__license__ = ""
 __descripstion__ = ""
 __usage__ = ""
 
@@ -16,8 +16,7 @@ import cPickle as pickle
 import argparse
 
 
-### Here are some pre-defined templates. 
-### You may use them with erasing comment-out symbols.
+### Here is a pre-defined template. 
 
 # For arguments information
 #
@@ -40,21 +39,14 @@ import argparse
 #args = arg_parser.parse_args()
 
 
-# For checking the number of arguments
-# If it's not correct, print out an error message.
-
-#if (argc != #):
-#    print 'Usage: # python %s arg1 arg2...' % argvs[0]
-#    sys.exit()
-
-
 # For logging date and time
+
 #d = datetime.datetime.today()
 #exp_time = d.strftime("%Y%m%d_%H%M")
 
 
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     # For logging date and time
     #start_time = datetime.datetime.now()
     #print "start at: " + str(start_time)
@@ -64,7 +56,6 @@ if __name__ == '__main__':
     #log_file.write('start at: ' + str(start_time) + '\n')
     
     # For module tests, write code here.
-    
     
     
     # For logging date and time

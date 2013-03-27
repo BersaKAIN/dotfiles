@@ -2,7 +2,6 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-
 # UNIX Alias
 alias ll='ls -aGhl'
 alias cp='cp -p'
@@ -62,4 +61,9 @@ alias octave="/Applications/Octave.app/Contents/Resources/bin/octave"
 # Terminal
 #export TERM=xterm-256color
 #export TERM=dtterm
+#PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
 
+# Rename tab name on iTerm2 by "tab new_tab_name"
+function tab() {
+    echo -ne "\033];$1\007";
+}
