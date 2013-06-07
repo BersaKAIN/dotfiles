@@ -17,7 +17,8 @@ NeoBundle 'neocomplcache'
 NeoBundle 'quickrun.vim'
 NeoBundle 'Solarized'
 NeoBundle 'yuroyoro/vim-python'
-NeoBundle 'yuroyoro/vim-scala'
+"NeoBundle 'yuroyoro/vim-scala'
+NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'jondistad/vimclojure'
 NeoBundle 'vim-scripts/surround.vim'
 NeoBundle 'Pydiction'
@@ -32,10 +33,10 @@ filetype indent on
 " General setting
 "-------------------------
 
-set tabstop=4
+set tabstop=2
 set expandtab
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set encoding=utf-8
 set list
 set listchars=tab:>-,eol:$
@@ -107,6 +108,13 @@ autocmd BufNewFile *.py 0r $HOME/.vim/template/python_tmp.txt
 
 
 "-------------------------
+" Scala setting
+"-------------------------
+"
+autocmd BufNewFile *.py 0r $HOME/.vim/template/scala_tmp.txt
+autocmd BufNewFile,BufRead *.scala set tabstop=2 shiftwidth=2 expandtab
+
+"-------------------------
 " VimShell setting
 "-------------------------
 
@@ -136,7 +144,8 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplcache_dictionary_filetype_lists = {
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
+    \ 'scheme' : $HOME.'/.gosh_completions',
+    \ 'scala' : $HOME.'/.vim/dict/scala.dict'
     \ }
 
 " Define keyword, for minor languages
