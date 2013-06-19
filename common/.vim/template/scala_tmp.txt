@@ -1,6 +1,6 @@
 object ObjectNameHere {
   def main(args: Array[String]): Unit = {
-    import scala.io_
+    import scala.io._
     
   }
 
