@@ -55,6 +55,11 @@ alias grm='git rm'
 export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.26
 export JAVA=$JAVA_HOME/bin 
 export PATH=$JAVA:$PATH
+export JAVA_OPTS="-Dfile.encoding=UTF-8"
+
+# Scala
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
+
 
 # Python
 export PYTHONSTARTUP=$HOME/.pythonstartup

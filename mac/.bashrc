@@ -45,6 +45,10 @@ alias grm='git rm'
 export JAVA_HOME=/Library/Java/Home
 export JAVA=$JAVA_HOME/bin 
 export PATH=$JAVA:$PATH
+export JAVA_OPTS="-Dfile.encoding=UTF-8"
+
+# Scala
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
 
 # TeX
 PATH=/usr/texbin:$PATH
