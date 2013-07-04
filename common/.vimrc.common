@@ -23,7 +23,7 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'jondistad/vimclojure'
 "NeoBundle 'vim-scripts/surround.vim'
 NeoBundle 'Pydiction'
-NeoBundle 'vimspell'
+"NeoBundle 'vimspell'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/Align'
@@ -345,3 +345,12 @@ function! s:hooks.on_source(bundle)
   IndentGuidesEnable
 endfunction
 
+
+"------------------------------------
+" vim-filer setting
+"------------------------------------
+"
+let g:vimfiler_as_default_explorer=1
+"let g:vimfiler_safe_mode_by_default=0
+"nnoremap <silent> ,vf :<C-u>VimFilerBufferDir -split -simple -winwidth=30 -quit<CR>
+nnoremap <silent> ,fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
