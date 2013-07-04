@@ -14,6 +14,8 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+"NeoBundle 'Shougo/neocomplcache-snippets-complete'
 NeoBundle 'quickrun.vim'
 NeoBundle 'Solarized'
 NeoBundle 'yuroyoro/vim-python'
@@ -111,7 +113,7 @@ autocmd BufNewFile *.py 0r $HOME/.vim/template/python_tmp.txt
 " Scala setting
 "-------------------------
 "
-autocmd BufNewFile *.py 0r $HOME/.vim/template/scala_tmp.txt
+autocmd BufNewFile *.scala 0r $HOME/.vim/template/scala_tmp.txt
 autocmd BufNewFile,BufRead *.scala set tabstop=2 shiftwidth=2 expandtab
 
 "-------------------------
@@ -155,10 +157,15 @@ if !exists('g:neocomplcache_keyword_patterns')
   let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
 " Plugin key-mappings.
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
+" imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+" smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+" inoremap <expr><C-g>     neocomplcache#undo_completion()
+" inoremap <expr><C-l>     neocomplcache#complete_common_string()
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+imap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
 
 " SuperTab like snippets behavior.
 "imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -312,6 +319,4 @@ let g:quickrun_config['rspec/normal'] = {
 function! RSpecQuickrun()
   let b:quickrun_config = {'type' : 'rspec/bundle'}
 endfunction
-
-
 
