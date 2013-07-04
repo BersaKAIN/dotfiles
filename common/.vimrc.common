@@ -13,19 +13,22 @@ endif
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
 NeoBundle 'neocomplcache'
 NeoBundle 'Shougo/neosnippet'
-"NeoBundle 'Shougo/neocomplcache-snippets-complete'
 NeoBundle 'quickrun.vim'
 NeoBundle 'Solarized'
 NeoBundle 'yuroyoro/vim-python'
-"NeoBundle 'yuroyoro/vim-scala'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'jondistad/vimclojure'
-NeoBundle 'vim-scripts/surround.vim'
+"NeoBundle 'vim-scripts/surround.vim'
 NeoBundle 'Pydiction'
 NeoBundle 'vimspell'
 NeoBundle 'kana/vim-fakeclip'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/Align'
+NeoBundle 'vim-scripts/YankRing.vim'
+NeoBundle "nathanaelkane/vim-indent-guides"
 
 filetype plugin on
 filetype indent on
@@ -46,7 +49,11 @@ set clipboard+=unnamed,autoselect
 set number
 set backspace=indent,eol,start
 set nobackup
-
+set nowritebackup
+set noswapfile
+set wrap
+set textwidth=0
+set colorcolumn=80
 
 "Highlight elimination by Esc*2 
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
@@ -55,6 +62,13 @@ nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 inoremap <silent> <Esc> <Esc>
 inoremap <silent> <C-[> <Esc>
 
+" search with centering
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
 
 " colorscheme
 syntax enable
@@ -225,18 +239,19 @@ if !exists('g:neocomplcache_omni_patterns')
 " D : <div class="section">|</div>
 " c : <font color="#|"></font>
 " C : <font color="#">|</font> 
-autocmd FileType html let b:surround_112 = "<p>\r</p>"
-autocmd FileType html let b:surround_117 = "<ul>\r</ul>"
-autocmd FileType html let b:surround_111 = "<ol>\r</ol>"
-autocmd FileType html let b:surround_108 = "<li>\r</li>"
-autocmd FileType html let b:surround_97  = "<a href=\"\">\r</a>"
-autocmd FileType html let b:surround_65  = "<a href=\"\r\"></a>"
-autocmd FileType html let b:surround_105 = "<img src=\"\r\" alt=\"\" />"
-autocmd FileType html let b:surround_73  = "<img src=\"\" alt=\"\r\" />"
-autocmd FileType html let b:surround_100 = "<div>\r</div>"
-autocmd FileType html let b:surround_68  = "<div class=\"section\">\r</div>"
-autocmd FileType html let b:surround_99  = "<font color=\"\r\"></font>"
-autocmd FileType html let b:surround_67  = "<font color=\"\">\r</font>"
+"
+"autocmd FileType html let b:surround_112 = "<p>\r</p>"
+"autocmd FileType html let b:surround_117 = "<ul>\r</ul>"
+"autocmd FileType html let b:surround_111 = "<ol>\r</ol>"
+"autocmd FileType html let b:surround_108 = "<li>\r</li>"
+"autocmd FileType html let b:surround_97  = "<a href=\"\">\r</a>"
+"autocmd FileType html let b:surround_65  = "<a href=\"\r\"></a>"
+"autocmd FileType html let b:surround_105 = "<img src=\"\r\" alt=\"\" />"
+"autocmd FileType html let b:surround_73  = "<img src=\"\" alt=\"\r\" />"
+"autocmd FileType html let b:surround_100 = "<div>\r</div>"
+"autocmd FileType html let b:surround_68  = "<div class=\"section\">\r</div>"
+"autocmd FileType html let b:surround_99  = "<font color=\"\r\"></font>"
+"autocmd FileType html let b:surround_67  = "<font color=\"\">\r</font>"
 
 "-------------------------
 " unite.vim setting
@@ -318,5 +333,15 @@ let g:quickrun_config['rspec/normal'] = {
   \}
 function! RSpecQuickrun()
   let b:quickrun_config = {'type' : 'rspec/bundle'}
+endfunction
+
+"------------------------------------
+" vim-indent-guides setting
+"------------------------------------
+"
+let s:hooks = neobundle#get_hooks("vim-indent-guides")
+function! s:hooks.on_source(bundle)
+  let g:indent_guides_guide_size = 1
+  IndentGuidesEnable
 endfunction
 
