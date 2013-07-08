@@ -17,7 +17,6 @@ NeoBundle 'Shougo/vimfiler'
 NeoBundle 'neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'quickrun.vim'
-NeoBundle 'Solarized'
 NeoBundle 'yuroyoro/vim-python'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'jondistad/vimclojure'
@@ -29,6 +28,11 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle "nathanaelkane/vim-indent-guides"
+"NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'Solarized'
+"NeoBundle 'vim-scripts/Lucius'
+"NeoBundle 'vim-scripts/molokai'
+"NeoBundle 'vim-scripts/hybrid.vim'
 
 filetype plugin on
 filetype indent on
@@ -75,6 +79,8 @@ syntax enable
 set background=dark
 "let g:solarized_termcolors=16
 colorscheme solarized
+"colorscheme molokai
+"colorscheme hybrid
 
 
 " change spelling checker colorscheme
@@ -120,14 +126,14 @@ command! Exec call <SID>ExecPy()
 autocmd FileType python map <silent> <C-w> :call <SID>ExecPy()<CR>
 
 "Read Python template
-autocmd BufNewFile *.py 0r $HOME/.vim/template/python_tmp.txt
+autocmd BufNewFile *.py 0r $HOME/.vim/template/python_tmp.py
 
 
 "-------------------------
 " Scala setting
 "-------------------------
 "
-autocmd BufNewFile *.scala 0r $HOME/.vim/template/scala_tmp.txt
+autocmd BufNewFile *.scala 0r $HOME/.vim/template/scala_tmp.scala
 autocmd BufNewFile,BufRead *.scala set tabstop=2 shiftwidth=2 expandtab
 
 "-------------------------
@@ -341,7 +347,10 @@ endfunction
 "
 let s:hooks = neobundle#get_hooks("vim-indent-guides")
 function! s:hooks.on_source(bundle)
+  let g:indent_guides_start_level = 2
   let g:indent_guides_guide_size = 1
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=white guibg=black ctermbg=1
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey guibg=darkgrey ctermbg=2 
   IndentGuidesEnable
 endfunction
 
