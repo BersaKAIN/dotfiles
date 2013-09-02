@@ -1,5 +1,10 @@
-export WORKDIR=/work/$USER
+#export WORKDIR=/work/$USER
+
 export PATH=$HOME/local/lib/:$PATH
+export PATH=$PATH:~/local/bin
+export LD_LIBRARY_PATH=~/local/lib
+export C_INCLUDE_PATH=~/local/include
+export CPLUS_INCLUDE_PATH=~/local/include
 
 # UNIX Alias
 alias ll='ls -aGhl --color=auto'
