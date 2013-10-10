@@ -20,19 +20,21 @@ NeoBundle 'quickrun.vim'
 NeoBundle 'yuroyoro/vim-python'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'jondistad/vimclojure'
-"NeoBundle 'vim-scripts/surround.vim'
 NeoBundle 'Pydiction'
-"NeoBundle 'vimspell'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle "nathanaelkane/vim-indent-guides"
-"NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'Solarized'
-"NeoBundle 'vim-scripts/Lucius'
-"NeoBundle 'vim-scripts/molokai'
-"NeoBundle 'vim-scripts/hybrid.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'vim-scripts/Lucius'
+NeoBundle 'vim-scripts/molokai'
+NeoBundle 'vim-scripts/hybrid.vim'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'https://github.com/ujihisa/neco-look.git'
+"NeoBundle 'vimspell'
+"NeoBundle 'vim-scripts/surround.vim'
 
 filetype plugin on
 filetype indent on
@@ -58,6 +60,9 @@ set noswapfile
 set wrap
 set textwidth=0
 set colorcolumn=80
+set foldmethod=marker
+set cursorline
+set cursorcolumn
 
 "Highlight elimination by Esc*2 
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
@@ -77,10 +82,9 @@ nnoremap g# g#zz
 " colorscheme
 syntax enable
 set background=dark
-"let g:solarized_termcolors=16
-colorscheme solarized
+"colorscheme solarized
 "colorscheme molokai
-"colorscheme hybrid
+colorscheme hybrid
 
 
 " change spelling checker colorscheme
