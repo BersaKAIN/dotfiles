@@ -1,4 +1,3 @@
-=======
 #You may remove comment outs in accordance with your environment.
 
 #export WORKDIR=/work/$USER
@@ -8,7 +7,6 @@ export PATH=$PATH:~/local/bin
 export LD_LIBRARY_PATH=~/local/lib
 export C_INCLUDE_PATH=~/local/include
 export CPLUS_INCLUDE_PATH=~/local/include
-=======
 
 #SHELL
 #SHELL=/usr/local/bin/bash
@@ -33,7 +31,6 @@ alias tmux='env LD_LIBRARY_PATH=~/local/opt/libevent/lib:$LD_LIBRARY_PATH ~/loca
 ## CKY
 export llncky=$HOME/tools/cky/src/llncky
 export PATH=$HOME/tools/cky/src/:$PATH
-=======
 
 
 # DPSTG
@@ -88,7 +85,6 @@ alias gri='git rebase --interactive'
 alias gcp='git cherry-pick'
 alias grm='git rm'
 
-=======
 # JAVA
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.26
 #export JAVA=$JAVA_HOME/bin 
@@ -109,7 +105,6 @@ export PATH=$PATH:$SCALA_HOME/bin
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 export PATH=$HOME/.pythonz/pythons/CPython-2.7.3/bin:$PATH
 #
-=======
 
 # Scala
 #export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
