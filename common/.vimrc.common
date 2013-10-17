@@ -368,3 +368,14 @@ let g:vimfiler_as_default_explorer=1
 "let g:vimfiler_safe_mode_by_default=0
 "nnoremap <silent> ,vf :<C-u>VimFilerBufferDir -split -simple -winwidth=30 -quit<CR>
 nnoremap <silent> ,fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
+
+"------------------------------------
+" lightline setting
+"------------------------------------
+"
+"
+
+if !has('gui_running')
+    set t_Co=256
+  endif
+
