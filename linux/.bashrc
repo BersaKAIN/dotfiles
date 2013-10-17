@@ -82,7 +82,6 @@ export llncky=$HOME/tools/cky/src/llncky
 export PATH=$HOME/tools/cky/src/:$PATH
 
 # extract-spfeatures
-export extract-spfeatures=$HOME/tools/extract-spfeatures/extract-spfeatures
 export PATH=$HOME/tools/extract-spfeatures/:$PATH
 
 # IRSTLM
