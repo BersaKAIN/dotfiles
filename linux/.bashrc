@@ -6,6 +6,9 @@ source ~/dotfiles/common/.bashrc.common
 # GENERAL CONFIG
 ####################
 
+# Alias for linux
+alias ll='ls -aGhl --color=auto'
+
 # PATH
 #export WORKDIR=/work/$USER
 export PATH=$HOME/local/lib/:$PATH
