@@ -14,6 +14,10 @@ export LD_LIBRARY_PATH=~/local/lib
 export C_INCLUDE_PATH=~/local/include
 export CPLUS_INCLUDE_PATH=~/local/include
 
+# LOCALE
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # SHELL
 #SHELL=/usr/local/bin/bash
 
