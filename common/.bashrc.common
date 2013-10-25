@@ -2,7 +2,7 @@
 # Command History
 shopt -s histappend
 export HISTCONTROL=ignoreboth
-export HISTIGNORE=ls*:ll*:history*:cd*:pwd*:lv*
+export HISTIGNORE="ls*:ll*:history*:cd*:pwd*:lv*"
 export HISTSIZE=10000
 HISTTIMEFORMAT='%Y%m%d %T: ';
 export HISTTIMEFORMAT
