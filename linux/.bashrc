@@ -6,7 +6,7 @@ source ~/dotfiles/common/.bashrc.common
 # GENERAL CONFIG
 ####################
 
-# Alias for linux
+# Alias for Linux
 alias ll='ls -aGhl --color=auto'
 
 # PATH
