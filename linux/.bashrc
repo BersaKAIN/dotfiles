@@ -1,9 +1,10 @@
 #You may remove comment outs in accordance with your environment.
 
+source ~/dotfiles/common/.bashrc.common
+
 ####################
 # GENERAL CONFIG
 ####################
-
 
 # PATH
 #export WORKDIR=/work/$USER
@@ -16,38 +17,8 @@ export CPLUS_INCLUDE_PATH=~/local/include
 # SHELL
 #SHELL=/usr/local/bin/bash
 
-# UNIX Alias
-alias ll='ls -aGhl --color=auto'
-alias cp='cp -p'
-alias diskspace="du -S | sort -n -r |more"
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias df='df -h'
-alias du='du -h'
-
 # tmux
 alias tmux='env LD_LIBRARY_PATH=~/local/opt/libevent/lib:$LD_LIBRARY_PATH ~/local/opt/tmux/bin/tmux'
-
-# git
-source ~/git-completion.bash
-GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
-#PS1="\h@\u:\W\$(__git_ps1) \$ "
-alias gs='git status'
-alias gc='git commit'
-alias ga='git add'
-alias gd='git diff'
-alias gb='git branch'
-alias gl='git log'
-alias gsb='git show-branch'
-alias gco='git checkout'
-alias gg='git grep'
-alias gk='gitk --all'
-alias gr='git rebase'
-alias gri='git rebase --interactive'
-alias gcp='git cherry-pick'
-alias grm='git rm'
 
 # JAVA
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.26

@@ -1,17 +1,14 @@
+#You may remove comment outs in accordance with your environment.
+
+source ~/Dropbox/dotfiles/common/.bashrc.common
+
+####################
+# GENERAL CONFIG
+####################
 
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# UNIX Alias
-alias ll='ls -aGhl'
-alias cp='cp -p'
-alias diskspace="du -S | sort -n -r |more"
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias df='df -h'
-alias du='du -h'
-
 
 # vim
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
@@ -20,26 +17,6 @@ alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"
 
 # tmux(launchctl setenv PATH $PATH)
 /usr/local/bin/reattach-to-user-namespace launchctl setenv PATH $PATH
-
-# git
-source ~/git-completion.bash
-GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
-#PS1="\h@\u:\W\$(__git_ps1) \$ "
-alias gs='git status'
-alias gc='git commit'
-alias ga='git add'
-alias gd='git diff'
-alias gb='git branch'
-alias gl='git log'
-alias gsb='git show-branch'
-alias gco='git checkout'
-alias gg='git grep'
-alias gk='gitk --all'
-alias gr='git rebase'
-alias gri='git rebase --interactive'
-alias gcp='git cherry-pick'
-alias grm='git rm'
 
 # JAVA
 export JAVA_HOME=/Library/Java/Home
