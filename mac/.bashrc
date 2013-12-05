@@ -32,13 +32,6 @@ PATH=/usr/texbin:$PATH
 PATH=/usr/local/texlive/2011/bin/universal-darwin:$PATH
 PATH=/usr/local/texlive/2011/bin/x86_64-darwin:$PATH
 
-# Gnuplot
-export PATH=/Applications/gnuplot.app:/Applications/gnuplot.app/bin:$PATH
-alias gnuplot="/Applications/gnuplot.app/Contents/Resources/bin/gnuplot"
-
-# Octave
-alias octave="/Applications/Octave.app/Contents/Resources/bin/octave"
-
 # Terminal
 #export TERM=xterm-256color
 #export TERM=dtterm
