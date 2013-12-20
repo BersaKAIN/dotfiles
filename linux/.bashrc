@@ -40,12 +40,15 @@ export PATH=$PATH:$SCALA_HOME/bin
 #
 ## Python
 #export PYTHONSTARTUP=$HOME/.pythonstartup
-#export PYTHONPATH=$PYTHONPATH:$WORKDIR/proj/:$HOME/tools/
+#export PYTHONPATH=$PYTHONPATH:/usr/lib/pyshared/python2.7/
 #
 ## Pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 export PATH=$HOME/.pythonz/pythons/CPython-2.7.3/bin:$PATH
+export PYTHONPATH=$PYTHONPATH:/usr/lib/pyshared/python2.7/lxml
 
+## R
+export R_LIBS=$HOME/local/lib/R/library
 
 ###############################
 # SPECIFIC TOOLS/CODES CONFIG
