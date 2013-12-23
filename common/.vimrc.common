@@ -85,7 +85,7 @@ syntax enable
 set background=dark
 "colorscheme solarized
 "colorscheme molokai
-autocmd ColorScheme * highlight LineNr ctermfg=245 guifg=245
+autocmd ColorScheme * highlight LineNr ctermfg=245
 colorscheme hybrid
 
 
