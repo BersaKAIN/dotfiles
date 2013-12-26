@@ -14,6 +14,7 @@ alias ll='ls -aGhl --color=auto'
 export PATH=$HOME/local/lib/:$PATH
 export PATH=$PATH:~/local/bin
 export LD_LIBRARY_PATH=~/local/lib
+export LD_LIBRARY_PATH=~/local/lib/fst:$LD_LIBRARY_PATH
 export C_INCLUDE_PATH=~/local/include
 export CPLUS_INCLUDE_PATH=~/local/include
 
