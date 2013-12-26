@@ -44,8 +44,7 @@ export PATH=$PATH:$SCALA_HOME/bin
 #
 ## Pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
-export PATH=$HOME/.pythonz/pythons/CPython-2.7.3/bin:$PATH
-export PYTHONPATH=$PYTHONPATH:/usr/lib/pyshared/python2.7/lxml
+export PATH=$HOME/.pythonz/pythons/CPython-2.7.5/bin:$PATH
 
 ## R
 export R_LIBS=$HOME/local/lib/R/library
