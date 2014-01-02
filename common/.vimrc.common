@@ -95,8 +95,14 @@ syntax enable
 set background=dark
 "colorscheme solarized
 "colorscheme molokai
-autocmd ColorScheme * highlight LineNr ctermfg=245
 colorscheme hybrid
+autocmd ColorScheme * highlight LineNr ctermfg=245
+
+" window setting
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 
 " change spelling checker colorscheme
