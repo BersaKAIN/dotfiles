@@ -87,13 +87,15 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
-" colorscheme
+" colorscheme setting
 syntax enable
 set background=dark
+autocmd ColorScheme * highlight LineNr ctermfg=245
+
+" select colorscheme
 "colorscheme solarized
 "colorscheme molokai
 colorscheme hybrid
-autocmd ColorScheme * highlight LineNr ctermfg=245
 
 " window setting
 nnoremap <c-j> <c-w>j
