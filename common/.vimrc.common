@@ -52,6 +52,7 @@ filetype indent on
 " General setting
 "-------------------------
 
+set notitle
 set tabstop=2
 set expandtab
 set softtabstop=2
@@ -71,6 +72,7 @@ set colorcolumn=80
 set foldmethod=marker
 set cursorline
 set cursorcolumn
+
 
 "Highlight elimination by Esc*2 
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
