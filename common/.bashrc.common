@@ -1,4 +1,7 @@
 
+# Edit mode (vi)
+set -o vi
+
 # Command History
 shopt -s histappend
 export HISTCONTROL=ignoreboth
