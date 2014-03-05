@@ -13,10 +13,14 @@ alias ll='ls -aGhl --color=auto'
 #export WORKDIR=/work/$USER
 export PATH=$HOME/local/lib/:$PATH
 export PATH=$PATH:~/local/bin
-export LD_LIBRARY_PATH=~/local/lib
+export LD_LIBRARY_PATH=~/local/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=~/local/lib/fst:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=~/local/include
-export CPLUS_INCLUDE_PATH=~/local/include
+export C_INCLUDE_PATH=~/local/include:$CPLUS_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=~/local/include:$CPLUS_INCLUDE_PATH
+export PKG_CONFIG_PATH=~/local/lib/pkgconfig:$PKG_CONFIG_PATH
+
+export CPPFLAGS="-I$HOME/local/include $CPPFLAGS"
+export LDFLAGS="-L$HOME/local/lib $LDFLAGS"
 
 # LOCALE
 export LC_CTYPE=en_US.UTF-8
@@ -46,6 +50,10 @@ export PATH=$PATH:$SCALA_HOME/bin
 ## Pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 export PATH=$HOME/.pythonz/pythons/CPython-2.7.5/bin:$PATH
+export PATH=$HOME/.pythonz/pythons/pypy-2.2.1/bin:$PATH
+
+## PyPy
+alias pypy='$HOME/tools/pypy-2.2.1-linux_x86_64-portable/bin/pypy'
 
 ## R
 export R_LIBS=$HOME/local/lib/R/library
