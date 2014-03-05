@@ -128,6 +128,16 @@ command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
 
 
 "-------------------------
+" Brackets Completion setting
+"-------------------------
+"
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+
+"-------------------------
 " Pydiction setting
 "-------------------------
 "
