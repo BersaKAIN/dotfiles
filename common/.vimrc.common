@@ -43,6 +43,7 @@ NeoBundle 'vim-scripts/hybrid.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'ujihisa/neco-look.git'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'Phize/vim-rainbow_pairs'
 
 filetype plugin on
 filetype indent on
