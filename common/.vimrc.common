@@ -100,6 +100,13 @@ autocmd ColorScheme * highlight LineNr ctermfg=245
 "colorscheme molokai
 colorscheme hybrid
 
+" rainbow pair"
+let g:rainbow_pairs_token_pairs = [
+      \ ['/(/',  '/)/'],
+      \ ['/\[/', '/\]/'],
+      \ ['/{/',  '/}/']
+      \]
+
 " window setting
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
