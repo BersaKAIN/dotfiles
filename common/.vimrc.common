@@ -46,6 +46,7 @@ NeoBundle 'ujihisa/neco-look.git'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Phize/vim-rainbow_pairs'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'vim-scripts/javacomplete'
 
 filetype plugin on
 filetype indent on
@@ -172,6 +173,12 @@ autocmd FileType python :inoremap # X#
 "Read Python template
 autocmd BufNewFile *.py 0r $HOME/.vim/template/python_tmp.py
 
+"-------------------------
+" Java setting
+"-------------------------
+"
+autocmd FileType java :setlocal omnifunc=javacomplete#Complete
+autocmd FileType java :setlocal completefunc=javacomplete#CompleteParamsInfo
 
 "-------------------------
 " Scala setting
