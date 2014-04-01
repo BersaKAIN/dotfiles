@@ -378,7 +378,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " quickrun setting
 "------------------------------------
 "
-let g:quickrun_config={'*': {'split': ''}}
+let g:quickrun_config={'*': {'split': '', "outputter/buffer/split" : ":botright 8sp"}}
 set splitbelow
 
 "------------------------------------
