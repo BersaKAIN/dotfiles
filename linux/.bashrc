@@ -1,5 +1,10 @@
 #You may remove comment outs in accordance with your environment.
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. source /etc/bashrc
+fi
+
 source ~/dotfiles/common/.bashrc.common
 
 ####################
