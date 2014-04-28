@@ -2,7 +2,7 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. source /etc/bashrc
+	source /etc/bashrc
 fi
 
 source ~/dotfiles/common/.bashrc.common
