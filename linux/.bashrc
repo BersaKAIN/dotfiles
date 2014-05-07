@@ -38,10 +38,11 @@ export LC_ALL=en_US.UTF-8
 alias tmux='env LD_LIBRARY_PATH=~/local/opt/libevent/lib:$LD_LIBRARY_PATH ~/local/opt/tmux/bin/tmux'
 
 # JAVA
+export JAVA_HOME=/usr/lib/jvm/default-java
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.26
-#export JAVA=$JAVA_HOME/bin 
-#export PATH=$JAVA:$PATH
-#export JAVA_OPTS="-Dfile.encoding=UTF-8"
+export JAVA=$JAVA_HOME/bin 
+export PATH=$JAVA:$PATH
+export JAVA_OPTS="-Dfile.encoding=UTF-8"
 #
 ## Scala
 export SCALA_HOME=$HOME/local/share/scala-2.10.2
