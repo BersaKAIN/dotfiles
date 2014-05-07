@@ -179,6 +179,7 @@ autocmd BufNewFile *.py 0r $HOME/.vim/template/python_tmp.py
 "
 autocmd FileType java :setlocal omnifunc=javacomplete#Complete
 autocmd FileType java :setlocal completefunc=javacomplete#CompleteParamsInfo
+autocmd FileType java setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 "-------------------------
 " Scala setting
