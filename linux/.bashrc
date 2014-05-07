@@ -1,5 +1,10 @@
 #You may remove comment outs in accordance with your environment.
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	source /etc/bashrc
+fi
+
 source ~/dotfiles/common/.bashrc.common
 
 ####################
@@ -85,3 +90,5 @@ export PATH=$HOME/tools/extract-spfeatures/:$PATH
 #export MANPATH=$MANPATH:$SRILM/man
 #export MACHINE_TYPE=i686-m64
 
+# JOSHUA
+export JOSHUA=$HOME/tools/joshua-v5.0
