@@ -9,6 +9,7 @@ source ~/Dropbox/dotfiles/common/.bashrc.common
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=$HOME/work/workspace/Algorithm/src/:$PATH
 
 # vim
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
