@@ -17,7 +17,14 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
+     (auto-completion :variables
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-complete-with-key-sequence nil
+                      auto-completion-private-snippets-directory nil
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-enable-sort-by-usage t)
+
      ;; better-defaults
      emacs-lisp
      ;; git
